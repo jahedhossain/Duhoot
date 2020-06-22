@@ -1,0 +1,146 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.main-menu .navbar-nav > li > a {
+		padding: 17px 15px;
+		text-transform: uppercase;
+	}
+    .search-panel {
+        padding: 13.7px 14px;
+    }
+    .login-panel {
+        padding: 15px 7px;
+    }
+    .filter-item ul li:nth-child(1) {
+        display: none;
+    }
+    .offer-list ul li a {
+        margin: 0;
+    }
+    .offer-list ul li::before {
+        bottom: 67px;
+        left: 122px;
+        width: 16%;
+    }
+}
+
+/* Tablet Layout: 768px. (use with col sm) */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-area .logo {
+        text-align: center;
+    }
+    .header-area .logo::before {
+        right: 0;
+        text-align: center;
+    }
+    .main-menu {
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .login-panel::before {
+        width: 0;
+    }
+    .form-title h2 {
+        margin-top: 150px;
+    }
+    .update-item ul li,
+    .filter-item ul li {
+        margin: 10px;
+    }
+    .filter-item {
+        text-align: center;
+    }
+    .filter-item ul li a {
+        vertical-align: sub;
+    }
+    .single-product-top .product-icon {
+        top: 89%;
+    }
+    .offer-list ul li::before {
+        bottom: 70px;
+        left: 123px;
+        width: 13%;
+    }
+    .offer-list ul li a {
+        margin: 0;
+    }
+}
+
+/* Mobile Layout: 320px. (use with col-xs) */
+
+@media only screen and (max-width: 767px) {
+    .main-menu {
+        float: none;
+    }
+    .navbar-toggle {
+        margin-top: -43px;
+    }
+    .login-panel::before {
+        width: 1000px;
+    }
+    .form-title h2 {
+        font-size: 23px;
+        margin-top: 200px;
+    }
+    .single-product-top .product-icon {
+        top: 91%;
+    }
+    .extra-product-rating .rating-review li span {
+        font-size: 16px;
+        padding-right: 9px;
+    }
+    .extra-product-rating .rating-review li:nth-child(2) {
+        padding-top: 0;
+    }
+    .extra-product-rating .rating-review li:nth-child(3) a {
+        padding-top: 1px;
+}
+    .offer-list ul li a {
+        margin: 0;
+    }
+    .update-item ul li,
+    .filter-item ul li {
+        margin: 10px;
+    }
+    .filter-item,
+    .update-item>ul {
+        text-align: center;
+    }
+    .filter-item ul li a {
+        display: inline-block;
+        margin: 7px 0;
+    }
+    .offer-list ul li::before {
+        width: 0;
+    }
+    .nav-tabs>li {
+        float: none;
+        margin-bottom: -1px;
+    }
+    .newsletter-signup form .form-group .subscribe-btn.form-control {
+        display: inline-block;
+        position: inherit;
+        margin: 20px 0;
+        width: auto;
+    }
+    .footer-widget {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .main-menu .navbar-nav > li > a {
+        text-align: center;
+    }
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single-product-top .product-icon {
+        top: 93%;
+    }
+}
+
+/* Tablet Layout: 640px. */
+@media only screen and (min-width: 640px) and (max-width: 960px) {}

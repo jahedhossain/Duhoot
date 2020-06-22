@@ -1,0 +1,936 @@
+/*============================================================
+	Template Name: Duhoot
+	Author: Md Jahed Hossain
+	PSD URL: None 
+	Description: None
+    Tags: responsive, onepage template, personal, slider , animation
+==============================================================*/
+
+
+/*	TOC  */
+
+
+/*-------------------------
+
+	 1. HEADER AREA
+	 2. SEARCING AREA
+	 3. FILTER AREA
+	 4. OUR PRODUCT FEATURE
+	 5. OFFER LIST
+	 6. FOOTER AREA
+	 7. STICKY MENU
+	 8. SCROLL TO TOP 
+ 
+---------------------------*/
+
+/* ==========================================================================
+   Base CSS
+   ========================================================================== */
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+html,
+body { height: 100% }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #566375;
+    background: #f3f1f2;
+    line-height: 26px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a:hover { text-decoration: none }
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+/*========================================
+    1. Header Area 
+=========================================*/
+.header-area .logo a {
+    display: inline-block;
+    padding: 7px 0;
+}
+.header-area {
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+.main-menu{
+    float: right;
+}
+.main-menu .navbar-default .navbar-nav>li>a {
+    color: #96a6a7;
+}
+.main-menu .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.main-menu .navbar-nav>li>a {
+    padding: 17px 19px;
+    text-transform: uppercase;
+}
+.main-menu .navbar-default .navbar-nav > li > a:hover {
+  color: green;
+}
+.is-sticky .main-menu .navbar-default .navbar-nav > li > a:hover {
+  color: aqua;
+}
+.main-menu .navbar {
+    margin-bottom: 0px;
+    min-height: 0px;
+}
+.search-panel,
+.login-panel {
+    float: left;
+}
+.search-panel i {
+    color: #fff;
+    display: inline-block;
+    font-size: 24px;
+}
+.search-panel {
+    background: #e2dee0 none repeat scroll 0 0;
+    padding: 17.7px 14px;
+}
+.login-panel {
+    background: #e94e38 none repeat scroll 0 0;
+    padding: 19px 23px;
+    position: relative;
+}
+.login-panel:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e94e38;
+    height: 100%;
+    width: 500px;
+    content: "";
+    z-index: -1;
+}
+.login-panel i {
+    color: #fff;
+    font-size: 18px;
+}
+.login-panel i {
+    padding-right: 7px;
+}
+.login-panel span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/*========================================
+    2. Searching Form Area
+=========================================*/
+.searching-area {
+    background: url(../img/banner.jpg) no-repeat fixed center center / cover;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+/*===searching and footer area overlay===*/
+.searching-area,
+.footer-area {
+    position: relative;
+    z-index: 5;
+}
+.searching-area::after,
+.footer-area:after{
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.37;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.form-title h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.search-form .form-control,
+.filter-form .form-control {
+    background-color: rgba(48,44,40,0.55);
+    border: 1px solid #4f4b47;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px;
+    height: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    
+}
+.select-icon {
+    position: relative;
+}
+.select-icon:after {
+    color: #fff;
+    content: "\f107";
+    font-family: "FontAwesome";
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    pointer-events: none; /*--===important property===*/
+}
+.select-icon .form-control,
+.filter-form .form-control{
+    -webkit-appearance: none ;  /*--=== start important property===*/
+    -moz-appearance: none ;
+    -ms-appearance: none ;
+    appearance: none ;
+}
+
+/*===placeholder browser support start===*/
+.form-control.search-box::-moz-placeholder {
+    color: #fff;
+}
+.form-control.search-box::-moz-input-placeholder {
+    color: #fff;
+}
+.form-control.search-box::-ms-placeholder {
+    color: #fff;
+}
+.form-control.search-box::-webkit-placeholder {
+    color: #fff;
+}
+/*===placeholder browser support end===*/
+
+.form-control.submit-btn {
+    width: auto;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #e94e38;
+    border: none;
+    margin-top: 20px;
+}
+
+
+
+/*========================================
+    3. Filter Area
+=========================================*/
+.filter-area {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom: 20px;
+    border: 1px solid #e2dee0;
+    padding: 10px 0;
+}
+.filter-area a {
+    color: #96a6a7; 
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.update-item ul li, 
+.filter-item ul li {
+    display: inline;
+}
+.update-item ul li a, 
+.filter-item ul li a {
+    display: inline-block;
+    padding: 10px 10px;
+}
+.update-item ul li.active a {
+    color: #e94e38;
+}
+.update-item ul li a {
+    padding: 10px 10px 0 0;
+}
+.filter-form .form-control {
+    background: #fff;
+    color: #e94e38;
+    border: 1px solid #96a6a7;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 40px;
+    margin-top: 5px;
+} 
+.filter-form .select-icon:after {
+    color: #96a6a7;
+    top: 2px;
+}
+.filter-form .show-map:after {
+    content:"\f041";
+    color: #96a6a7;
+}
+.filter-form .show-map .form-control {
+    color: #96a6a7;
+}
+.filter-item ul li a {
+    background: #b6c0c1;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: #fff;
+    transition: 0.64s;
+}
+.filter-item ul li a:hover {
+    transform: rotate(360deg);
+}
+.filter-item ul li a i{
+    font-size: 23px;
+}
+.filter-item ul li:nth-child(1) {
+    text-transform: uppercase;
+}
+.filter-item ul li:nth-child(2) a {
+    background: red;
+}
+.filter-item ul li:nth-child(5) a {
+    background: #f19e1f;
+}.filter-item ul li:nth-child(6) a {
+    background: #88499c;
+}
+
+
+/*========================================
+    4. Our Product Feature Area
+=========================================*/
+
+.single-product.margin-bottom {
+    margin-bottom: 30px;
+}
+.single-product {
+    transition: 0.4s;
+}
+.single-product:hover {
+    box-shadow: 0 0 9px 4px rgba(0, 0, 0, 0.14);
+}
+
+/*====single product icon > change color code start here====*/
+.single-product-top .product-icon.change-color-1 i {
+    background: #f19e1f;
+}
+.single-product-bottom .product-catagory.change-color-1 a{
+    color: #f19e1f;
+}
+.single-product-bottom .product-catagory.change-color-2 a {
+    color: #88499c;
+}
+.single-product-top .product-icon.change-color-2 i{
+    background: #88499c;
+}
+.single-product-top.border-color-1 img{
+    border-bottom: 3px solid #f19e1f;
+}
+.single-product-top.border-color-2 img{
+    border-bottom: 3px solid #88499c;
+}
+/*====single product icon > change color code end====*/
+
+.single-product-top {
+    position: relative;
+}
+.single-product-top img {
+    border-bottom: 3px solid #1baf5d;
+    display: block;
+    width: 100%;
+}
+.single-product-top .product-icon {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 85%;
+    z-index: 25;
+}
+.single-product-top .product-icon i {
+    background: #1baf5d none repeat scroll 0 0;
+    border: 4px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 28px;
+    height: 55px;
+    padding: 8px;
+    width: 55px;
+}
+.single-product-top .product-price {
+    background: #1baf5d none repeat scroll 0 0;
+    border-radius: 30px;
+    padding: 8px 18px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.single-product-top .product-price h6 {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+.single-product-top .product-overlay {
+    background: rgba(138, 89, 141, 0.7) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    transform: scale(0);
+}
+.single-product-top .product-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.single-product-top .product-overlay .show-more a {
+    background: #9963a9 none repeat scroll 0 0;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+}
+/*===single product all transition===*/
+.single-product-top .product-overlay,
+.single-product-top .product-overlay .show-more a,
+.single-product .single-product-top img,
+.single-product .product-icon i,
+.single-product-bottom .product-catagory a,
+.single-product-top .product-overlay .product-rating span i{
+    transition: 0.4s;
+    cursor: pointer;
+}
+/*===single product all hover effect start===*/
+.single-product:hover .product-overlay {
+    transform: scale(1); 
+}
+.single-product:hover .product-icon i {
+    background: #9963a9;
+}
+.single-product:hover .single-product-top img {
+    border-bottom: 3px solid #9963a9;
+}
+.single-product:hover .single-product-bottom .product-catagory a {
+    color: #9963a9;
+}
+/*===single product all hover effect end ===*/
+
+.single-product-top .product-overlay .product-rating span i:hover{
+    color: #1baf5d;
+}
+.single-product-top .product-overlay .show-more a:hover{
+    background: #1baf5d;
+}
+.single-product:hover .product-icon i {
+    transform: rotate(360deg);
+}
+.single-product .product-icon i:hover {
+    background: #1baf5d;
+} 
+.single-product .single-product-bottom .product-catagory a:hover {
+    color: #1baf5d;
+}
+.single-product-top .product-overlay .product-rating > span {
+    padding-right: 13px;
+}
+.single-product-top .product-overlay .product-rating span i {
+    font-size: 18px;
+}
+.single-product-top .product-overlay .product-rating {
+    margin: 10px 0;
+}
+.single-product-bottom {
+    background: #fff none repeat scroll 0 0;
+    padding: 10px 0;
+}
+.single-product-bottom .single-product-title h4 {
+    font-size: 14px;
+    padding: 25px 10px 15px;
+}
+.single-product-bottom .product-catagory a {
+    color: #1baf5d;
+    display: inline-block;
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.single-product-bottom .main-rating i {
+    color: #f19e1f;
+}
+
+/*===custom rating start===*/
+.rating-review li {
+    float: left;
+}
+.rating-review {
+    display: table;
+    margin: 0 auto;
+}
+.rating-review li:last-child a {
+    color: #96a6a7;
+    padding-left: 5px;
+}
+
+.all-rating {
+    height: 21px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.blank-rating {
+    bottom: 0;
+    color: #f19e1f;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.star-5 .main-rating {
+    width: 100%;
+}
+.star-5 .blank-rating {
+    left: 100%;
+}
+.star-4 .main-rating {
+    width: 81%;
+}
+.star-4 .blank-rating {
+    left: 81%;
+}
+.star-3 .main-rating {
+    width: 60%;
+}
+.star-3 .blank-rating {
+    left: 60%;
+}
+.star-2 .main-rating {
+    width: 38%;
+}
+.star-2 .blank-rating {
+    left: 41%;
+}
+.star-1 .main-rating {
+    width: 12%;
+}
+.star-1 .blank-rating {
+    left: 20%;
+}
+/*===custom rating end===*/
+
+/*===Our Extra Product start===*/
+.our-extra-product .single-product-top .product-icon {
+    bottom: 0;
+    left: 17px;
+    right: 0;
+    top: 87%;
+}
+.our-extra-product .single-product-top img {
+    height: 140px;
+}
+.our-extra-product .single-product-top .product-icon i {
+    padding: 5px 11px;
+}
+.extra-product-rating .rating-review {
+    bottom: 0;
+    color: #f19e1f;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 72%;
+}
+.extra-product-rating .rating-review li span {
+    color: #fff;
+    font-size: 18px;
+    padding-right: 29px;
+    text-transform: uppercase;
+}
+.extra-product-rating .rating-review li:nth-child(3) a {
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+}
+.our-extra-product .single-product-bottom .rating-review {
+    display: inline-block;
+    margin-top: 25px;
+}
+.single-product-bottom .product-review-author img {
+    float: left;
+    padding: 39px 15px;
+    width: 100px;
+}
+.single-product-bottom .product-review-author {
+    height: 20px;
+    position: relative;
+    z-index: 13;
+}
+.single-product-bottom .product-review-author::before {
+    background: #f3f1f2;
+    bottom: 0;
+    content: "";
+    height: 47px;
+    left: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    z-index: -1;
+}
+.single-product-bottom .review-author-name h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 6px 0;
+}
+.single-product-bottom .author-post p {
+    font-size: 14px;
+    padding-left: 99px;
+}
+.single-product-bottom .author-post a {
+    color: #566375;
+    display: inline-block;
+    font-weight: 400;
+}
+.our-extra-product .single-product-bottom {
+    background: #fff none repeat scroll 0 0;
+    height: auto;
+    padding: 10px 25px 10px 0;
+    position: relative;
+    z-index: 17;
+}
+/*===Our Extra Product end===*/
+
+
+
+/*========================================
+    5. Offer List
+=========================================*/
+
+.offer-title h2 {
+    color: #566375;
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+.offer-list {
+    margin: 40px 0;
+}
+.offer-list ul {
+    display: table;
+    margin: 0 auto;
+}
+.offer-list ul li {
+    display: inline;
+}
+.offer-list ul li.active a i{
+    color: #1baf5d;
+    border: 2px solid #1baf5d;
+}
+.offer-list ul li a {
+    display: inline-block;
+    margin: 10px 35px;
+}
+.offer-list ul li a i {
+    border: 2px solid #9dacad;
+    border-radius: 50%;
+    color: #9dacad;
+    display: table-cell;
+    font-size: 50px;
+    height: 100px;
+    vertical-align: middle;
+    width: 100px;
+    transition: 0.4s;
+}
+.offer-list ul li a i:hover {
+    border: 2px solid #1baf5d;
+    color: #1baf5d;
+}
+.offer-list ul li a:hover i {
+    transform: rotate(360deg);
+}
+.offer-list ul li {
+    position: relative;
+}
+.offer-list ul li::before {
+    background: #e2dee0 none repeat scroll 0 0;
+    bottom: 78px;
+    content: "";
+    height: 3px;
+    left: 164px;
+    position: absolute;
+    width: 35%;
+}
+.offer-list ul li:last-child::before {
+    display: none;
+}
+.offer-details-title h3 {
+    color: #1baf5d;
+    margin-bottom: 30px;
+}
+.offer-details-left {
+    float: left;
+    padding-right: 28px;
+}
+.offer-details-left a {
+    background: #1db05e none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 25px;
+    height: 50px;
+    padding: 7px 13px;
+    width: 50px;
+}
+.offer-details-right {
+    padding-left: 84px;
+}
+
+
+/*==custom bootstrap tab start===*/
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.offer-list .nav-tabs {
+    border-bottom: 1px solid transparent;
+}
+.offer-list .nav-tabs > li > a:hover {
+    border-color: transparent;
+}
+.offer-list .nav-tabs > li > a:hover {
+    border-color: transparent;
+}
+.offer-list .nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+/*===custom bootstrap tab end===*/
+
+/*===change offer details color start====*/
+.offer-details-right.change-color p {
+    color: #000;
+}
+.offer-details-left.change-color a{
+    border: 1px solid #000;
+    color: #000;
+    background: transparent;
+}
+/*===change offer details color end====*/
+
+
+
+/*========================================
+    6. Footer Area
+=========================================*/
+.footer-area {
+    background: url(../img/footer-bg.jpg) no-repeat fixed center center / cover;
+    padding: 60px 0;
+}
+.newsletter-title h2 {
+    color: #fff;
+    font-size: 24px;
+}
+.newsletter-signup {
+    position: relative;
+    margin: 50px 0;
+}
+.newsletter-signup form .form-group .subscribe-box.form-control {
+    background-color: transparent;
+    border: 1px solid #5b5553;
+    border-radius: 30px;
+    font-size: 18px;
+    height: 66px;
+    padding: 6px 50px;
+    width: 100%;
+    background: rgba(90,85,83,0.7);
+    color: #fff;
+}
+.newsletter-signup::after {
+    color: #fff;
+    content:"\f003";
+    font-family: "FontAwesome";
+    font-size: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+}
+.newsletter-signup form .form-group .subscribe-btn.form-control {
+    background: #e94e38 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 27px;
+    box-shadow: 1px 4px #c1412e;
+    color: #fff;
+    height: 48px;
+    padding: 5px 30px;
+    position: absolute;
+    right: 12px;
+    text-transform: uppercase;
+    top: 7px;
+    width: auto;
+}
+
+/*===placeholder browser support start===*/
+.subscribe-box.form-control::-moz-placeholder{
+    color: #fff;
+}
+.subscribe-box.form-control::-moz-input-placeholder {
+    color: #fff;
+}
+.subscribe-box.form-control::-ms-placeholder {
+    color: #fff;
+}
+.subscribe-box.form-control::-webkit-placeholder {
+    color: #fff;
+}
+/*===placeholder browser support end===*/
+
+.footer-widget h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.footer-widget ul li a {
+    color: #c0bebc;
+}
+.footer-widget.follow-us {
+    color: #fff;
+}
+.footer-widget.follow-us a {
+    color: #fff;
+    display: inline-block;
+    font-size: 27px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+
+/*========================================
+    7. Sticky Menu
+=========================================*/
+
+.sticky-wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.is-sticky .header-area {
+    transition: 0.5s;
+}
+.is-sticky .header-area,
+.is-sticky .login-panel::before,
+.is-sticky .header-area .search-panel,
+.is-sticky .header-area .login-panel {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+.is-sticky .main-menu .navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.header-area .logo{
+    position: relative;
+}
+.header-area .logo::before {
+    content: "duhoot";
+    font-size: 34px;
+    left: 50px;
+    position: absolute;
+    top: 13px;
+    opacity: 0;
+}
+.is-sticky .header-area .logo::before {
+    opacity: 1;
+}
+
+
+/*=======================================
+    8. .SCROLL TO TOP
+========================================*/
+
+#backtotop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	display: inline-block;
+	font-size: 16px;
+	height: 36px;
+	opacity: 0.2;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	text-align: center;
+	visibility: hidden;
+	width: 36px;
+	line-height: 36px;
+	z-index:999;
+}
+#backtotop i {
+    background: #1db05e none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 28px;
+    height: 50px;
+    padding: 8px;
+    width: 50px;
+}
+#backtotop.visible{
+	visibility:visible; opacity:.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+#backtotop:hover{
+	opacity:1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+/*=======================================
+    10. Nice Scroll
+========================================*/
+.nicescroll-rails.nicescroll-rails-vr {
+    z-index: 8000 !important;
+}
+
